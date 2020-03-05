@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление статьи</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" name="add_animal" action="#" method="post">
+        <h3>Форма добавления статьи</h3>
+        <div>
+            <label for="country">Страна</label>
+            <input required minlength="3" maxlength="15" id="country" type="text" name="country" placeholder="Страна">
+        </div>
+
+        <div>
+            <label for="city">Город</label>
+            <input required minlength="3" maxlength="50" id="city" type="text" name="city" placeholder="Город(-а)">
+        </div>
+
+        <div>
+            <legend>Какие документы нужны для поездки</legend>
+            <label><input checked type="checkbox" name="docs[]" value="passport">
+            Паспорт
+            </label>
+            <label><input type="checkbox" name="docs[]" value="international passport">
+                Загранпаспорт
+            </label>
+            <label><input type="checkbox" name="docs[]" value="visa">
+                Виза
+            </label>
+        </div>
+
+
+        <div>
+            <label for="data">Дата начала поездки <input id ="data" name="data" minlength="0.5" maxlength="18" type="date"></label>
+        </div>
+
+        <div>
+            <label for="time">Длительность поездки</label>
+            <select required id="time" name="time">
+                <option value="half_month">14 дней</option>
+                <option value="one_month">Один месяц</option>
+                <option value="two_month">Два месяца</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="description">Текст статьи</label>
+            <textarea name="description" id="description" placeholder="Введите текст статьи"></textarea> <!--name id никак не связаны, т.е могут иметь или не иметь одинаковые имена-->
+        </div>
+
+        <div>
+            <label for="photo">Фотографии для галереи</label>
+            <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
+            <input multiple id="photo" type="file" accept="image/*" name="photo[]">
+        </div>
+
+        <input type="submit" value="Опубликовать статью"><!--Отправка данных-->
+        <input type="reset" value="Очистить форму">
+    </form>
+</body>
+</html>

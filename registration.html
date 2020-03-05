@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h4>Форма регистрации</h4>
+    <form name="registr" action="#" method="post">
+        <div>
+            <label for="photo">Фото профиля</label>
+            <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
+            <input id="photo" type="file" accept="image/*" name="photo[]">
+        </div>
+
+        <div>
+            <label for="user_surname">Фамилия</label>
+            <input  type="text" name="user_surname" id="user_surname" minlength="3" maxlength="10">
+        </div>
+
+        <div>
+            <label for="user_name">Имя</label>
+            <input required autofocus type="text" name="user_name" id="user_name" minlength="3" maxlength="10">
+        </div>
+
+        <div>
+            <label for="middle_name">Отчество</label>
+            <input type="text" name="middle_name" id="middle_name" minlength="3" maxlength="10">
+        </div>
+
+        <div>
+            <label>Возраст <input name="age" type="number" min="18"></label>
+        </div>
+        <div>
+            <label>Номер телефона <input required type="text" placeholder="89996695887" id="number" minlength="11" maxlength="11"></label>
+        </div>
+
+        <div>
+            <label>Пароль <input required type="password"  id="password" minlength="6"></label>
+        </div>
+
+
+        <input type="submit" value="Зарегистрироваться"><!--Отправка данных-->
+        <input type="reset" value="Очистить форму">
+    </form>
+</body>
+</html>
