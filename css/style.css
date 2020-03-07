@@ -8,6 +8,9 @@ main {
     background-image: url(../photo/background1.png);
     background-attachment: fixed;
 }
+main a[href] {
+    color: black;
+}
 
 ul, ol {
     list-style-type: none;
