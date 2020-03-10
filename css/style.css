@@ -9,7 +9,7 @@ main {
     background-attachment: fixed;
 }
 main a[href] {
-    color: black;
+    color: green;
 }
 
 ul, ol {
@@ -18,7 +18,7 @@ ul, ol {
     margin: 0;
     padding: 0;
 }
-p {
+body, p {
     margin: 0;
     padding: 0;
 
