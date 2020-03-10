@@ -10,6 +10,9 @@
     display: grid;
     grid-template-rows: 15% 5% 80%;
     grid-template-columns: 1fr 1fr;
+
+    max-width: 1000px;/*960-1200*/
+    margin: 0 auto;
 }
 
 
