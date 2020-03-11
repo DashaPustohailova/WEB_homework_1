@@ -1,0 +1,41 @@
+.flex-row {
+    display: flex;
+    flex-direction: row; /*расположение в ряд*/
+}
+
+.flex_row_post {
+    display: flex;
+}
+.flex_row {
+    display: flex;
+    flex-direction: row; /*расположение в ряд*/
+    flex-wrap: wrap;
+}
+.post_img article{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.post_img div {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+}
+.flex_col {
+    display: flex;
+    flex-direction: column; /*расположение в ряд*/
+    flex-wrap: wrap;
+}
+.flex_row_post img {
+    opacity: 0.4;
+}
+
+.flex-6 {
+    flex: 50%
+}
+
+.flex-4 {
+    flex: 33.33%
+}
+

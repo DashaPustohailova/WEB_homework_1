@@ -1,10 +1,10 @@
 header {
     background-image: url(../photo/1.jpg);
     color: white;
-
+    background-attachment: fixed;
 }
 
-main {
+body {
     background-image: url(../photo/background1.png);
     background-attachment: fixed;
 }
