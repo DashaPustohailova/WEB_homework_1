@@ -1,0 +1,4 @@
+fieldset {
+    border: 1px solid darkslategrey; /* размер рамки.тип рамки. цвет рамки*/
+    margin: 10px;
+}

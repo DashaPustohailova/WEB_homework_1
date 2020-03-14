@@ -4,46 +4,103 @@
     <meta charset="UTF-8">
     <title>Регистрация</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/reg.css">
 </head>
 <body>
+<header class="head">
+    <nav class="photo">
+        <ul class="flex-row flex_space_around grow center">
+            <li>
+                <a href="main.html"><strong><em>Главная</em></strong></a>
+            </li>
+            <li> <a href="#"><em>Страны</em></a></strong>
+                <ul>
+                    <li>
+                        <a href="italia.html" title="Список городов, которые можно посетить"><i>Италия</i></a>
+                        <ul>
+                            <li>
+                                <a href="city.html" title="Список городов, которые можно посетить"><i>Рим</i></a>
+                            </li>
+                            <li>
+                                <a href="city.html" title="Список городов, которые можно посетить"><em>Милан</em></a>
+                            </li>
+                            <li>
+                                <a href="city.html" title="Список городов, которые можно посетить"><em>Венеция</em></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="italia.html" title="Список городов, которые можно посетить"><em>Канада</em></a>
+                    </li>
+                    <li>
+                        <a href="italia.html" title="Список городов, которые можно посетить"><em>Россия</em></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><strong><em>Лайфхаки</em></strong></a>
+            </li>
+            <li>
+                <a href="#"><strong><em>Инвертарь</em></strong></a>
+            </li>
+            <li>
+                <a href="#"><strong><em>Ближайшие поездки</em></strong></a>
+            </li>
+            <li>
+                <a href="#"><strong><em>Контакты</em></strong></a>
+            </li>
+            <li>
+                <a href="registration.html"><strong><em>Регистрация</em></strong></a>
+            </li>
+        </ul>
+    </nav>
 
+</header>
     <h4>Форма регистрации</h4>
-    <form name="registr" action="#" method="post">
-        <div>
-            <label for="photo">Фото профиля</label>
-            <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
-            <input id="photo" type="file" accept="image/*" name="photo[]">
-        </div>
+    <form class="photo" name="registr" action="#" method="post">
+        <fieldset>
+            <div>
+                <label for="photo">Фото профиля</label>
+                <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
+                <input id="photo" type="file" accept="image/*" name="photo[]">
+            </div>
 
-        <div>
-            <label for="user_surname">Фамилия</label>
-            <input  type="text" name="user_surname" id="user_surname" minlength="3" maxlength="10">
-        </div>
+            <div>
+                <label for="user_surname">Фамилия</label>
+                <input  type="text" name="user_surname" id="user_surname" minlength="3" maxlength="10">
+            </div>
 
-        <div>
-            <label for="user_name">Имя</label>
-            <input required autofocus type="text" name="user_name" id="user_name" minlength="3" maxlength="10">
-        </div>
+                <div>
+                    <label for="user_name">Имя</label>
+                    <input required autofocus type="text" name="user_name" id="user_name" minlength="3" maxlength="10">
+                    <div>
+                        <label for="middle_name">Отчество</label>
+                        <input type="text" name="middle_name" id="middle_name" minlength="3" maxlength="10">
 
-        <div>
-            <label for="middle_name">Отчество</label>
-            <input type="text" name="middle_name" id="middle_name" minlength="3" maxlength="10">
-        </div>
+                    </div>
+                </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label>Возраст <input name="age" type="number" min="18"></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label>Номер телефона <input required type="text" placeholder="89996695887" id="number" minlength="11" maxlength="11"></label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <label>Пароль <input required type="password"  id="password" minlength="6"></label>
+            </div>
+        </fieldset>
 
-        <div>
-            <label>Возраст <input name="age" type="number" min="18"></label>
+        <div class="center">
+                <input type="submit" value="Зарегистрироваться"><!--Отправка данных-->
+                <input type="reset" value="Очистить форму">
         </div>
-        <div>
-            <label>Номер телефона <input required type="text" placeholder="89996695887" id="number" minlength="11" maxlength="11"></label>
-        </div>
-
-        <div>
-            <label>Пароль <input required type="password"  id="password" minlength="6"></label>
-        </div>
-
-
-        <input type="submit" value="Зарегистрироваться"><!--Отправка данных-->
-        <input type="reset" value="Очистить форму">
     </form>
 </body>
 </html>
