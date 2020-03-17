@@ -9,13 +9,14 @@ form :focus {
 
 textarea:invalid,
 input:out-of-range,
+input[type="number"]:invalid,
 input[type="text"]:invalid,
 input[type="password"]:invalid{
     border: 2px solid red;
 }
 
-form :required + span:before,
-form :in-range + span:before {
+
+form :required + span:before {
     /* + - селектор  соседнего элемента   */
     content: "\2718";
     font-weight: bolder;
@@ -23,7 +24,7 @@ form :in-range + span:before {
     margin-left: 10px; /*между текстом и элементом required*/
     font-size: 20px;
 }
-form :out-of-range + span:before,
+
 form :required:focus:valid + span:before,
 form :required:not(:focus):valid + span:before {
     content: "\2714";

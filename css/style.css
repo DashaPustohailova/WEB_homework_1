@@ -6,7 +6,6 @@ header {
 }
 html {
     scroll-behavior: smooth;
-    transition: all 1s ease;
 }
 ::selection {
     color: white;
@@ -33,6 +32,33 @@ body, p {
 
 }
 
+
+#parent_in {
+    background: #000;
+    opacity: 0.5;
+}
+
+.modal:target { /*Стилизация объекта, когда к нему перешли*/
+    display: block;
+}
+.modal:not(:target) { /*отрицание указателя в скобках*/
+    display: none;
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal {
+    position: absolute; /*относительно окна*/
+    left: 50%;
+    top: 50%;
+    background: lightblue;
+    padding: 30px;
+
+    transition: all 2s;
+}
 footer {
     background: #e5ecf5;
 }

@@ -57,7 +57,7 @@
     </nav>
 
 </header>
-    <form enctype="multipart/form-data" name="add_animal" action="#" method="post">
+    <form class="photo" enctype="multipart/form-data" name="add_animal" action="#" method="post">
         <h3>Форма добавления статьи</h3>
         <fieldset>
             <div>
@@ -90,7 +90,7 @@
 
         <fieldset>
             <div>
-                <label for="data">Дата начала поездки <input id ="data" name="data" type="date"></label>
+                <label for="data">Дата начала поездки <input required id ="data" name="data" type="date"></label>
                 <span></span>
             </div>
 
@@ -117,12 +117,13 @@
             <div>
                 <label for="photo">Фотографии для галереи</label>
                 <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
-                <input multiple id="photo" type="file" accept="image/*" name="photo[]">
+                <input required multiple id="photo" type="file" accept="image/*" name="photo[]">
+                <span></span>
             </div>
 
         </fieldset>
-        <input type="submit" value="Опубликовать статью"><!--Отправка данных-->
-        <input type="reset" value="Очистить форму">
+            <input type="submit" value="Опубликовать статью"><!--Отправка данных-->
+            <input type="reset" value="Очистить форму">
     </form>
 </body>
 </html>

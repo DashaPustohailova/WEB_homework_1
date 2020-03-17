@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: row; /*расположение в ряд*/
 }
+.flex-column {
+    display: flex;
+    flex-direction: column; /*расположение в ряд*/
+}
 .grow li {
     flex-grow: 1;
 }
