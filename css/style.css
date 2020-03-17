@@ -1,15 +1,24 @@
 header {
     background-image: url(../photo/1.jpg);
     color: white;
-    height: 100%;
+    background-size: cover;
+    height: 58px;
 }
-
+html {
+    scroll-behavior: smooth;
+    transition: all 1s ease;
+}
+::selection {
+    color: white;
+    background: cadetblue;
+}
 body {
     background-image: url(../photo/background1.png);
     background-attachment: fixed;
 }
 main a[href] {
     color: green;
+
 }
 
 ul, ol {

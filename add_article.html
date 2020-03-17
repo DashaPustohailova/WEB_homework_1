@@ -5,6 +5,7 @@
     <title>Добавление статьи</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/reg.css">
 </head>
 <body>
 <header class="head">
@@ -14,10 +15,10 @@
                 <a href="main.html"><strong><em>Главная</em></strong></a>
             </li>
             <li> <a href="#"><em>Страны</em></a></strong>
-                <ul>
+                <ul class="flex-row flex_space_around grow center grow_sub">
                     <li>
-                        <a href="italia.html.html" title="Список городов, которые можно посетить"><i>Италия</i></a>
-                        <ul>
+                        <a href="italiahtml" title="Список городов, которые можно посетить"><i>Италия</i></a>
+                        <ul class="grow_sub">
                             <li>
                                 <a href="city.html" title="Список городов, которые можно посетить"><i>Рим</i></a>
                             </li>
@@ -30,10 +31,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="Italia.html" title="Список городов, которые можно посетить"><em>Канада</em></a>
+                        <a href="italia.html" title="Список городов, которые можно посетить"><em>Канада</em></a>
                     </li>
                     <li>
-                        <a href="Italia.html" title="Список городов, которые можно посетить"><em>Россия</em></a>
+                        <a href="italia.html" title="Список городов, которые можно посетить"><em>Россия</em></a>
                     </li>
                 </ul>
             </li>
@@ -58,54 +59,68 @@
 </header>
     <form enctype="multipart/form-data" name="add_animal" action="#" method="post">
         <h3>Форма добавления статьи</h3>
-        <div>
-            <label for="country">Страна</label>
-            <input required minlength="3" maxlength="15" id="country" type="text" name="country" placeholder="Страна">
-        </div>
+        <fieldset>
+            <div>
+                <label for="country">Страна</label>
+                <input required minlength="3" maxlength="15" id="country" type="text" name="country" placeholder="Страна">
+                <span></span>
+            </div>
 
-        <div>
-            <label for="city">Город</label>
-            <input required minlength="3" maxlength="50" id="city" type="text" name="city" placeholder="Город(-а)">
-        </div>
+            <div>
+                <label for="city">Город</label>
+                <input required minlength="3" maxlength="50" id="city" type="text" name="city" placeholder="Город(-а)">
+                <span></span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <h3>Какие документы нужны для поездки</h3>
+                <label><input required checked type="checkbox" name="docs[]" value="passport">
+                    Паспорт
+                </label>
+                <label><input  required type="checkbox" name="docs[]" value="international passport">
+                    Загранпаспорт
+                </label>
+                <label><input required  type="checkbox" name="docs[]" value="visa">
+                    Виза
+                </label>
+             </div>
+        </fieldset>
 
-        <div>
-            <h1>Какие документы нужны для поездки</h1>
-            <label><input checked type="checkbox" name="docs[]" value="passport">
-            Паспорт
-            </label>
-            <label><input type="checkbox" name="docs[]" value="international passport">
-                Загранпаспорт
-            </label>
-            <label><input type="checkbox" name="docs[]" value="visa">
-                Виза
-            </label>
-        </div>
+
+        <fieldset>
+            <div>
+                <label for="data">Дата начала поездки <input id ="data" name="data" type="date"></label>
+                <span></span>
+            </div>
+
+            <div>
+                <label for="time">Длительность поездки</label>
+                <select id="time" name="time">
+                    <option value="half_month">14 дней</option>
+                    <option value="one_month">Один месяц</option>
+                    <option value="two_month">Два месяца</option>
+                </select>
+            </div>
+        </fieldset>
 
 
-        <div>
-            <label for="data">Дата начала поездки <input id ="data" name="data" minlength="0.5" maxlength="18" type="date"></label>
-        </div>
+        <fieldset>
+            <div>
+                <label for="description">Текст статьи</label>
+                <textarea  required name="description" id="description" placeholder="Введите текст статьи"></textarea> <!--name id никак не связаны, т.е могут иметь или не иметь одинаковые имена-->
+                <span></span>
+            </div>
+        </fieldset>
 
-        <div>
-            <label for="time">Длительность поездки</label>
-            <select required id="time" name="time">
-                <option value="half_month">14 дней</option>
-                <option value="one_month">Один месяц</option>
-                <option value="two_month">Два месяца</option>
-            </select>
-        </div>
+        <fieldset>
+            <div>
+                <label for="photo">Фотографии для галереи</label>
+                <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
+                <input multiple id="photo" type="file" accept="image/*" name="photo[]">
+            </div>
 
-        <div>
-            <label for="description">Текст статьи</label>
-            <textarea name="description" id="description" placeholder="Введите текст статьи"></textarea> <!--name id никак не связаны, т.е могут иметь или не иметь одинаковые имена-->
-        </div>
-
-        <div>
-            <label for="photo">Фотографии для галереи</label>
-            <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
-            <input multiple id="photo" type="file" accept="image/*" name="photo[]">
-        </div>
-
+        </fieldset>
         <input type="submit" value="Опубликовать статью"><!--Отправка данных-->
         <input type="reset" value="Очистить форму">
     </form>

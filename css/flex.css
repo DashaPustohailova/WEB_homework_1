@@ -8,26 +8,40 @@
 .grow a {
     display: block;
     padding: 20px 0;
+    transition: hover 1s;
 }
-
+.top {
+    top: -50px;
+}
 .grow li a:hover {
     opacity: 0.5;
     color: deepskyblue;
 }
 
-.grow li ul {
+.grow_sub li {
+    background: lightblue;
+    color: green;
+}
+.grow li > ul {
     display: none;
     min-width: 150px;
+    position: relative;
 }
 
 .grow li:hover > ul {
     display: block;
     transition: all 0.3s ease;
 }
-
-.grow li > ul li ul {
+.grow li ul li {
+    border-top: 2px solid white;
     position: relative;
-    right: -150px;
+}
+.grow li > ul  li  ul {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 101%;
+    top: 0;
 }
 .flex_row_post {
     display: flex;

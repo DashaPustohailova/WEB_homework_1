@@ -15,10 +15,10 @@
                 <a href="main.html"><strong><em>Главная</em></strong></a>
             </li>
             <li> <a href="#"><em>Страны</em></a></strong>
-                <ul>
+                <ul class="flex-row flex_space_around grow center grow_sub">
                     <li>
                         <a href="italia.html" title="Список городов, которые можно посетить"><i>Италия</i></a>
-                        <ul>
+                        <ul class="grow_sub">
                             <li>
                                 <a href="city.html" title="Список городов, которые можно посетить"><i>Рим</i></a>
                             </li>
@@ -57,6 +57,7 @@
     </nav>
 
 </header>
+<main  class="photo">
     <h4>Форма регистрации</h4>
     <form class="photo" name="registr" action="#" method="post">
         <fieldset>
@@ -68,12 +69,14 @@
 
             <div>
                 <label for="user_surname">Фамилия</label>
-                <input  type="text" name="user_surname" id="user_surname" minlength="3" maxlength="10">
+                <input required  type="text" name="user_surname" id="user_surname" minlength="3" maxlength="10">
+                <span></span>
             </div>
 
                 <div>
                     <label for="user_name">Имя</label>
                     <input required autofocus type="text" name="user_name" id="user_name" minlength="3" maxlength="10">
+                    <span></span>
                     <div>
                         <label for="middle_name">Отчество</label>
                         <input type="text" name="middle_name" id="middle_name" minlength="3" maxlength="10">
@@ -83,17 +86,20 @@
         </fieldset>
         <fieldset>
             <div>
-                <label>Возраст <input name="age" type="number" min="18"></label>
+                <label>Возраст <input required name="age" type="number" min="18"></label>
+                <span></span>
             </div>
         </fieldset>
         <fieldset>
             <div>
                 <label>Номер телефона <input required type="text" placeholder="89996695887" id="number" minlength="11" maxlength="11"></label>
+                <span></span>
             </div>
         </fieldset>
         <fieldset>
             <div>
                 <label>Пароль <input required type="password"  id="password" minlength="6"></label>
+                <span></span>
             </div>
         </fieldset>
 
@@ -102,5 +108,6 @@
                 <input type="reset" value="Очистить форму">
         </div>
     </form>
+</main>
 </body>
 </html>

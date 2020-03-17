@@ -2,3 +2,33 @@ fieldset {
     border: 1px solid darkslategrey; /* размер рамки.тип рамки. цвет рамки*/
     margin: 10px;
 }
+form :focus {
+    outline: none;
+    border-color: lightblue;
+}
+
+textarea:invalid,
+input:out-of-range,
+input[type="text"]:invalid,
+input[type="password"]:invalid{
+    border: 2px solid red;
+}
+
+form :required + span:before,
+form :in-range + span:before {
+    /* + - селектор  соседнего элемента   */
+    content: "\2718";
+    font-weight: bolder;
+    color: red;
+    margin-left: 10px; /*между текстом и элементом required*/
+    font-size: 20px;
+}
+form :out-of-range + span:before,
+form :required:focus:valid + span:before,
+form :required:not(:focus):valid + span:before {
+    content: "\2714";
+    font-weight: bolder;
+    color: limegreen;
+    margin-left: 10px; /*между текстом и элементом required*/
+    font-size: 20px;
+}

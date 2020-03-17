@@ -39,6 +39,11 @@
     align-self: center;
 }
 
+img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 1s;
+}
 .text {
     align-self: center;
+    padding: 10px;
 }
