@@ -1,0 +1,24 @@
+.container {
+    max-width: 1000px;/*960-1200*/
+    margin: 0 auto;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    flex: 100%;
+}
+
+.flex-2 {
+    flex: 50%;
+}
+
+.flex-3 {
+    flex: 25%;
+}
+
+.flex-4{
+    flex: 33.3333333%;
+}

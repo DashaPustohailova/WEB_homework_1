@@ -1,47 +1,36 @@
-body {
-    display: grid;
-    grid-template-areas:
-            "header_area header_area header_area"
-            "vertical_nav main_area news_block"
-            "footer_area footer_area footer_area";
-
-    /*определяем колонки сетки*/
-    grid-template-columns: 1fr minmax(500px, 1000px) 1fr;
-
-    /*определяем ряды сетки*/
-    grid-template-rows: auto auto auto;
-}
-
-
-.flex-row{
+.flex-row {
     display: flex;
+    flex-direction: row;
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
+.content-center {
+    max-width: 1000px; /*960-1200*/
+    margin: 0 auto;
 }
 
-.flex-wrap {
-    flex-wrap: wrap;
+.content-center img {
+    width: 100%;
+    height: 100%;
 }
 
+
+.flex-4 {
+    flex: 33.33333%
+}
 
 .flex-3 {
-    flex: 25%;
-}
-
-.flex-4{
-    flex: 33.3333333%;
+    flex: 25%
 }
 
 
-
-
-img {
-    width: 100%;
-    height: auto;
+.state p {
+    align-self: center;
 }
-p {
-    word-break: break-all;
+
+/*main div div{*/
+/*    border: 1px solid #b19891*/
+/*}*/
+.state {
+    margin: 3px;
+    border: 1px solid #b19891
 }
