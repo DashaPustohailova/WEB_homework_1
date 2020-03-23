@@ -49,5 +49,6 @@ img:hover {
 
 .text {
     align-self: center;
-    padding: 10px;
+    padding: 1em;
+    left: 5.5em;
 }

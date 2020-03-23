@@ -29,11 +29,9 @@
 .flex-6 {
     flex: 50%;
 }
-/*main div div{*/
-/*    border: 1px solid #b19891*/
-/*}*/
+
+
 .state {
-    padding: 1px;
     border: 1px solid #b19891
 }
 
